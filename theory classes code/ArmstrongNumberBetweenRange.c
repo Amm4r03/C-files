@@ -3,24 +3,36 @@
 
 int main()
 {
-    int digit,sum,i,number;
-    int lower,upper;
-    sum = 0;
-
-    printf("Please enter the numbers between which armstrong numbers are to be found : ");
+    int digit, sum, i, number;
+    int lower, upper, count;
+    
+    printf("Please enter the lower and upper limits to find Armstrong numbers between: ");
     scanf("%d %d", &lower, &upper);
-    printf("between the numbers %d and %d - in the range of %d numbers : \n",lower,upper,upper-lower);
-
+    
+    printf("Armstrong numbers between %d and %d:\n", lower, upper);
+    count = 0;
     for (i = lower; i <= upper; i++)
     {
-        int num = i;
-        while (num != 0)
+        number = i;
+        sum = 0;
+        while (number != 0)
         {
-            num = num % 10;
-            sum = num + sum;
-            num = num / 10;
+            digit = number % 10;
+            sum += pow(digit, 3);
+            number /= 10;
         }
 
+        if (i == sum) {
+            printf("%d ", i);
+            count++;
+        }
+    }
+    
+    if (count == 0) {
+        printf("No Armstrong numbers found between %d and %d.\n", lower, upper);
+    }
+    else {
+        printf("\nTotal Armstrong numbers found: %d\n", count);
     }
     
     return 0;
