@@ -17,9 +17,11 @@ int main()
         {
             i = i % 10;
             sum = i + sum;
-            i = i/10;
+            i = i / 10;
         }
+
     }
-    
+    printf("ok\n");
+    printf("%d",sum);
     return 0;
 }
