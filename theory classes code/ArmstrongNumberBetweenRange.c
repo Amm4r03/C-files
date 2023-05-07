@@ -13,15 +13,15 @@ int main()
 
     for (i = lower; i <= upper; i++)
     {
-        while (i != 0)
+        int num = i;
+        while (num != 0)
         {
-            i = i % 10;
-            sum = i + sum;
-            i = i / 10;
+            num = num % 10;
+            sum = num + sum;
+            num = num / 10;
         }
 
     }
-    printf("ok\n");
-    printf("%d",sum);
+    
     return 0;
 }
