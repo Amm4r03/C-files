@@ -19,7 +19,6 @@ int main()
             sum = i + sum;
             i = i/10;
         }
-    
     }
     
     return 0;
