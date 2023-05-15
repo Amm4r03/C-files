@@ -1,0 +1,8 @@
+#include <stdio.h>
+int main()
+{
+    int c = getchar();
+    int output = (c != EOF);
+    putchar(c);
+    return 0;
+}
