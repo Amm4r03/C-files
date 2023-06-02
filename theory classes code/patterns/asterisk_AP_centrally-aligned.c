@@ -21,14 +21,21 @@ int main()
         // spaces loop
         for (int j = 0; j < lines - i; j++)
         {
-            printf("\t");
+            printf("   ");
         }
 
         // character input loop - 1
         for (int k = 1; k <= i; k++)
         {
-            printf("%d\t", k);
+            printf("*  ");
         }
+        
+        // character input loop - 2
+        for (int l = 1; l < i; l++)
+        {
+            printf("*  ");
+        }
+        
         printf("\n");
         
     }
