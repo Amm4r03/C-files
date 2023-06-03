@@ -41,9 +41,25 @@ int main()
         printf("\n");
     }
 
-    for (int i = 0 ; i < lines-1 ; i++)
+    // bottom part of the diamond 
+
+    // loop initiation
+    for (int i = 1 ; i <= lines-1 ; i++)
     {
-        /* code */
+
+        // spaces loop
+        for (int j = 0; j < i; j++)
+        {
+            printf("   ");
+        }
+
+        // character input loop - 3
+        for (int k = 0; k < lines - i; k++)
+        {
+            printf("*  ");
+        }
+        
+        printf("\n");
     }
     
 
