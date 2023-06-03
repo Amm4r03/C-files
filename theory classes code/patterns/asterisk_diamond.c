@@ -16,7 +16,8 @@ int main()
     printf("Enter number of lines for which pattern is to be printed : ");
     scanf("%d", &lines);
 
-    // line loop
+    // top part of the loop
+    // loop initiation
     for (int i = 0; i <= lines; i++)
     {
 
@@ -59,6 +60,11 @@ int main()
             printf("*  ");
         }
         
+        // character input loop - 4
+        for (int l = 0; l < lines - i - 1; l++)
+        {
+            printf("*  ");
+        }
         printf("\n");
     }
     
