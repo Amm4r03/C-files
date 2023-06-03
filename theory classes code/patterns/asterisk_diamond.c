@@ -24,19 +24,19 @@ int main()
         // spaces loop
         for (int j = 0; j < lines - i; j++)
         {
-            printf("   ");
+            printf("  ");
         }
 
         // character input loop - 1
         for (int k = 1; k <= i; k++)
         {
-            printf("*  ");
+            printf("* ");
         }
         
         // character input loop - 2
         for (int l = 1; l < i; l++)
         {
-            printf("*  ");
+            printf("* ");
         }
         
         printf("\n");
@@ -51,19 +51,19 @@ int main()
         // spaces loop
         for (int j = 0; j < i; j++)
         {
-            printf("   ");
+            printf("  ");
         }
 
         // character input loop - 3
         for (int k = 0; k < lines - i; k++)
         {
-            printf("*  ");
+            printf("* ");
         }
         
         // character input loop - 4
         for (int l = 0; l < lines - i - 1; l++)
         {
-            printf("*  ");
+            printf("* ");
         }
         printf("\n");
     }
