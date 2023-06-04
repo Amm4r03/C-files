@@ -12,9 +12,18 @@
 int main()
 {
     int lines;
+    int inp_lines;
 
     printf("Enter number of lines for which pattern is to be printed : ");
-    scanf("%d", &lines);
+    scanf("%d", &inp_lines);
+
+    lines = (inp_lines+1) / 2;
+
+    if (1)
+    {
+        /* code */
+    }
+    
 
     // top part of the loop
     // loop initiation
