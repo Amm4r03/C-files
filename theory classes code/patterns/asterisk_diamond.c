@@ -17,11 +17,11 @@ int main()
     printf("Enter number of lines for which pattern is to be printed : ");
     scanf("%d", &inp_lines);
 
-    lines = (inp_lines+1) / 2;
+    lines = ( inp_lines + 1 ) / 2;
 
-    if (1)
+    if (inp_lines % 2 == 0)
     {
-        /* code */
+        printf("NOTE : pattern with %d lines is not possible, printing a pattern with %d lines instead\n", inp_lines, inp_lines - 1);
     }
     
 
