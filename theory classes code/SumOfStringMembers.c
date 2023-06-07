@@ -2,10 +2,11 @@
 #include <stdio.h>
 int main()
 {
-    int number,sum,digit;
+    int sum,digit;
+    long number;
     sum=0;
     printf("Enter a number : ");
-    scanf("%d", &number);
+    scanf("%ld", &number);
     while (number != 0)             // used while loop to keep the loop running until the number is not equal to 0
     {
         digit = number % 10;        // extract the right most digit of the number
