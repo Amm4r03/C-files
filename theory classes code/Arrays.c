@@ -1,3 +1,9 @@
+// this program takes input from user for array size
+// takes input from user for the array
+// also adds suffix to index of array (eg 1st, 2nd 3rd, etc.)
+// displays the array in the end
+// calculates the sum of all members of array
+
 #include <stdio.h>
 int main()
 {
