@@ -1,10 +1,10 @@
 #include <stdio.h>
 int main()
 {
-    int num;
+    long num;
     
     printf("Enter a number : ");
-    scanf("%d", &num);
+    scanf("%ld", &num);
 
     if (num == 2)
     {
