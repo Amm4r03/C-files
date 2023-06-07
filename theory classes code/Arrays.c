@@ -4,22 +4,23 @@ int main()
     int i, size, sum = 0;
     printf("Enter array size : ");
     scanf("%d", &size);
-    fflush stdin;
+
     int array[size];
-    char name[2];
+    char name[3];
+    
     for (i = 0; i < size; i++)
     {
-        if (i==1)
+        if ((i+1)%10 == 1)
         {
             name[0] = 's';
             name[1] = 't';
         }
-        else if (i==2)
+        else if ((i+1) %10 == 2)
         {
             name[0] = 'n';
             name[1] = 'd';
         }
-        else if (i=3)
+        else if ((i+1)%10 == 3)
         {
             name[0] = 'r';
             name[1] = 'd';
@@ -30,11 +31,17 @@ int main()
             name[1] = 'h';
         }
         
-        printf("Enter %d %s member of the array : ", i+1,name);
+        printf("Enter %d%s member of the array : ", i+1,name);
         scanf("%d", &array[i]);
     }
+    printf("The array generated is as follows : \n[");
+
     for (i = 0; i < size; i++)
     {
+        if(i+1 == size)
+        printf("%d]", array[i]);
+        
+        else
         printf("%d, ", array[i]);
     }
     
@@ -43,6 +50,6 @@ int main()
         sum = sum + array[i];
     }
 
-    printf("\nsum of all members of array is : %d", sum);
+    printf("\nsum of all members of array : %d", sum);
     return 0;
 }
