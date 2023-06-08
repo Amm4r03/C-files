@@ -13,7 +13,6 @@ int main ()
     printf("Enter a number : ");
     scanf("%d",&number);
     original = number;
-    int power = 0;
 
     for (total_digits = 0; number != 0; total_digits++)
     {
@@ -25,7 +24,6 @@ int main ()
     
     for (int i = 0; i < total_digits; i++)
     {
-        
         digit = number % 10;
         number = number / 10;
         sum = pow(digit, total_digits) + sum;
