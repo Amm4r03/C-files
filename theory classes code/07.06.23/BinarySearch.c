@@ -35,11 +35,11 @@ int SortedStatus(int input_array[], int size)   // function to check if array is
             if (input_array[y] > input_array[y+1])
             {
                 sorted = 0;     // status changed to unsorted
+                return sorted;
             }
         }
-        if (!sorted)            // code stops one checking that array is unsorted
-            break;
     }
+    return sorted;
 }
 
 int main()
