@@ -1,7 +1,6 @@
 // performs binary search on an input array, taking input for key as well from user
 
 #include <stdio.h>
-
 // allows user to enter unsorted array and the bubblesort function will sort the array
 void BubbleSort(int input_array[], int size)
 {
@@ -49,13 +48,26 @@ int main()
     printf("Enter size of array : ");
     scanf("%d", &size);
 
+    int input_array[size];
+
     for (int i = 0; i < size; i++)
     {
         printf("Enter the %d member of array : ", i + 1);
-        scanf("%d", i);
+        scanf("%d", &input_array[i]);
     }
 
-    printf("The array so obtained is as follows : \n[]");
+    printf("The array so obtained is as follows : \n[");
+    for (int i = 0; i < size; i++)
+    {
+        if (i + 1 == size)
+        {
+            printf("%d]", input_array[i]);
+        }
+        else
+        {
+            printf("%d, ", input_array[i]);
+        }
+    }
     
 
     return 0;
