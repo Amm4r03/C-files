@@ -1,5 +1,6 @@
-// this code only finds one result per search, cannot find out multiple members for the same search query
+// trying to make this one work even if there are multiple entries in the array
 
+// involves a little bit of linear search to fit the boundary case
 
 // performs binary search on an input array, taking input for key as well from user
 
