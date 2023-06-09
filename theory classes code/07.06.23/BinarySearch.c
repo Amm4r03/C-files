@@ -23,9 +23,25 @@ void BubbleSort(int input_array[], int size)
         if (sorted)
             break;
     }
-    
 }
 
+int SortedStatus(int input_array[], int size)   // function to check if array is sorted or not
+{
+    int sorted;
+    for (int i = 0; i < size - 1; i++)
+    {
+        sorted = 1;             // assumes that the array is sorted
+        for (int y = 0; y < size - i - 1; y++)
+        {
+            if (input_array[y] > input_array[y+1])
+            {
+                sorted = 0;     // status changed to unsorted
+            }
+        }
+        if (!sorted)            // code stops one checking that array is unsorted
+            break;
+    }
+}
 
 int main()
 {
@@ -38,6 +54,8 @@ int main()
         printf("Enter the %d member of array : ", i + 1);
         scanf("%d", i);
     }
+
+    printf("The array so obtained is as follows : \n[]");
     
 
     return 0;
