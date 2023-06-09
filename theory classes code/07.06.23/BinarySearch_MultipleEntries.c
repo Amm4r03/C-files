@@ -136,29 +136,29 @@ int main()
                 upper = middle;
                 locations[count] = middle - 1;
                 count++;
-                printf("3");
             }
             else if (input_array[middle+1] == key && input_array[middle-1] != key)
             {
                 lower = middle;
                 locations[count] = middle +1;
                 count++;
-                printf("4");
             }
             else
             {
                 while (input_array[middle - i] == key)
                 {
                     i++;
+                    locations[count] = middle - i;
+                    count++;
                 }
-                lower = i;
+                lower = middle - i;
                 while (input_array[middle + y] == key)
                 {
                     y++;
+                    locations[count] = middle + y;
+                    count++;
                 }
-                upper = y;
-                count = count + (upper - lower);
-                printf("5");
+                upper = middle + y;
                 break;
             }
         }
@@ -174,14 +174,27 @@ int main()
     {
         printf("Error : %d does not exist within the array", key);
     }
+    
     else
     {
-    printf("%d was found in the sorted array\nThe location is : \n", key);
-
-    for (int i = 0; i < count; i++)
-    {
-        printf("%d", locations[i]+1);
-    }
+        if (count == 1)
+        {
+            printf("%d was found in the sorted array\nThe location is : \n", key);
+        }
+        else
+        {
+            printf("%d was found in the sorted array at  %d locations\nThe indices are : \n [", key, count);
+        }
+    
+        for (int i = 0; i < count; i++)
+        {
+            if (i+1 == count)
+            {
+                printf("%d]", locations[i]+1);
+            }
+            
+            printf("%d, ", locations[i]+1);
+        }
     }
 
     return 0;
