@@ -61,7 +61,7 @@ int main()
     {
         if (i + 1 == size)
         {
-            printf("%d]", input_array[i]);
+            printf("%d]\n", input_array[i]);
         }
         else
         {
