@@ -45,7 +45,7 @@ int SortedStatus(int input_array[], int size)   // function to check if array is
 
 int main()
 {
-    int size;
+    int size, key;
     printf("Enter size of array : ");
     scanf("%d", &size);
 
@@ -69,7 +69,7 @@ int main()
             printf("%d, ", input_array[i]);
         }
     }
-    
+
     if (!SortedStatus(input_array, size))
     {
         printf("The array is not sorted\nThe sorted array is as follows : \n[");
@@ -88,9 +88,11 @@ int main()
 
     else
     {
-        printf("The array is already sorted in ascending order");
+        printf("The array is already sorted in ascending order\n");
     }
     
+    printf("Enter the number to search in the array : ");
+    scanf("%d", &key);
 
     return 0;
 }
