@@ -1,3 +1,6 @@
+// this code only finds one result per search, cannot find out multiple members for the same search query
+
+
 // performs binary search on an input array, taking input for key as well from user
 
 #include <stdio.h>
@@ -93,6 +96,93 @@ int main()
     
     printf("Enter the number to search in the array : ");
     scanf("%d", &key);
+
+    int middle = size/2;    // initialize the middle value of the array (rounds to floor in case of decimal)
+
+    int lower = 0;          // initialize lower index of array
+    int upper = size;       // initialize upper index of array (same as size)
+    int locations[size];    // size of array is set assuming that all numbers are same key
+    int count = 0;          // counter for number of matches found
+    int match;              // not used in code, will delete variable
+    int y;
+
+    for (int i = 0; lower != upper; i++)
+    {
+        
+        middle = (upper + lower)/2;
+
+        if (input_array[middle] == key)
+        {
+            locations[count] = middle;
+            count++;
+            break;
+        }
+        
+        else if (input_array[middle] > key)
+        {
+            upper = middle;
+        }
+
+        else
+        {
+            lower = middle;
+        }
+    
+        // boundary case : multiple values same as key exist in array
+        /*else if (input_array[middle] == key && (input_array[middle-1] == key || input_array[middle+1] == key))
+        {
+            locations[count] = middle;
+            count++;
+
+            if (input_array[middle-1] == key && input_array[middle+1] != key)
+            {
+                upper = middle;
+                locations[count] = middle - 1;
+                count++;
+            }
+            else if (input_array[middle+1] == key && input_array[middle-1] != key)
+            {
+                lower = middle;
+                locations[count] = middle +1;
+                count++;
+            }
+            else
+            {
+                while (input_array[middle - i] == key)
+                {
+                    i++;
+                }
+                lower = i;
+                while (input_array[middle + y] == key)
+                {
+                    y++;
+                }
+                upper = y;
+                count = count + (upper - lower);
+                break;
+            }
+        }
+        else
+        {
+            locations[count] = middle;
+            count++;
+            break;
+        }*/
+    }
+
+    if (count < 1)
+    {
+        printf("Error : %d does not exist within the array", key);
+    }
+    else
+    {
+    printf("%d was found in the sorted array\nThe location is : \n", key);
+
+    for (int i = 0; i < count; i++)
+    {
+        printf("%d", locations[i]+1);
+    }
+    }
 
     return 0;
 }
