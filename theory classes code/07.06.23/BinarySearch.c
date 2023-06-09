@@ -70,6 +70,27 @@ int main()
         }
     }
     
+    if (!SortedStatus(input_array, size))
+    {
+        printf("The array is not sorted\nThe sorted array is as follows : \n[");
+        BubbleSort(input_array, size);
+
+        for (int i = 0; i < size; i++)
+        {
+            if (i + 1 == size)
+            {
+                printf("%d]", input_array[i]);
+            }
+            else
+            printf("%d, ", input_array[i]);
+        }
+    }
+
+    else
+    {
+        printf("The array is already sorted in ascending order");
+    }
+    
 
     return 0;
 }
