@@ -112,25 +112,21 @@ int main()
         
         middle = (upper + lower)/2;
 
-        if (input_array[middle] == key)
-        {
-            locations[count] = middle;
-            count++;
-            break;
-        }
-        
-        else if (input_array[middle] > key)
+
+        if (input_array[middle] > key)
         {
             upper = middle;
+            printf("1");
         }
 
-        else
+        else if(input_array[middle] < key)
         {
             lower = middle;
+            printf("2");
         }
     
         // boundary case : multiple values same as key exist in array
-        /*else if (input_array[middle] == key && (input_array[middle-1] == key || input_array[middle+1] == key))
+        else if (input_array[middle] == key && (input_array[middle-1] == key || input_array[middle+1] == key))
         {
             locations[count] = middle;
             count++;
@@ -140,12 +136,14 @@ int main()
                 upper = middle;
                 locations[count] = middle - 1;
                 count++;
+                printf("3");
             }
             else if (input_array[middle+1] == key && input_array[middle-1] != key)
             {
                 lower = middle;
                 locations[count] = middle +1;
                 count++;
+                printf("4");
             }
             else
             {
@@ -160,15 +158,16 @@ int main()
                 }
                 upper = y;
                 count = count + (upper - lower);
+                printf("5");
                 break;
             }
         }
+
         else
         {
             locations[count] = middle;
             count++;
-            break;
-        }*/
+        }
     }
 
     if (count < 1)
