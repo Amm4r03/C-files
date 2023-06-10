@@ -35,5 +35,21 @@ int PrimeStatus(int number)
 
 int main()
 {
+    int number;
+    printf("Enter a number : ");
+    scanf("%d", &number);
+    int original = number;
+
+    int isPrime = PrimeStatus(number);
+
+    if(isPrime)
+    {
+        printf("%d is a prime number", original);
+    }
+    else
+    {
+        printf("%d is not a prime number", original);
+    }
+
     return 0;
 }
