@@ -51,5 +51,11 @@ int main()
 
     print_array(input_array, size);
 
+    printf("The reveresed array is as follows : ");
+
+    ArrayReverser(input_array, size);
+
+    print_array(input_array, size);
+
     return 0;
 }
