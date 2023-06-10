@@ -22,7 +22,7 @@ int PrimeStatus(int number)
 
     prime = 1;  // assume number to be prime 
 
-    for (int i = 3; i < (number/2)+1; i++)
+    for (int i = 3; i * i <= number; i++)
     {
         if (number % i == 0)
         {
