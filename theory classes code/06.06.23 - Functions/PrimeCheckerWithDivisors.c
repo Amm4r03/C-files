@@ -36,21 +36,27 @@ int PrimeStatus(int number)
     return prime;           // if full loop goes without triggering the inner condition, number is prime
 }
 
-void divisors(int number)
+void divisors(int number, int *divisors_array, int *count_of_divisors)
 {
-    for (int i = 1; i * i <= number; i++)
+    int i;
+    (*count_of_divisors) = 0;      // counts the number of occurrences
+    for (i = 1; i * i <= number; i++)
     {
         if (number % i == 0)
         {
-            if (number/i == i)
+            if (number / i == i)
             {
-                printf("%d", i);
+                divisors_array[*count_of_divisors] = i;
+                (*count_of_divisors)++;
             }
             else
             {
-                printf("%d, %d, ", i, number/i);
+                divisors_array[*count_of_divisors] = i;
+                (*count_of_divisors)++;
+                divisors_array[*count_of_divisors] = (number/i);
+                (*count_of_divisors)++;
             }
-        }   
+        }
     }
 }
 
