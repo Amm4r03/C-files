@@ -26,6 +26,17 @@ void print_array(int input_array[], int size)
     printf("]");
 }
 
+void ArrayReverser(int input_array[], int size)
+{
+    int temp;
+    for (int i = 0; i < size; i++)
+    {
+        temp = input_array[i];
+        input_array[i] = input_array[size-i];
+        input_array[size - i] = temp;
+    }   
+}
+
 int main()
 {
     int size;
