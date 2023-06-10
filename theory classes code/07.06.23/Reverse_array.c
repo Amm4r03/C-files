@@ -11,7 +11,7 @@ void populate_array(int input_array[], int size)    // inputs values into the ar
     }
 }
 
-void print_array(int input_array[], int size)
+void print_array(int input_array[], int size)       // prints the values of the array
 {
     printf("[");
     for (int i = 0; i < size; i++)
@@ -23,7 +23,7 @@ void print_array(int input_array[], int size)
         }
         
     }
-    printf("]");
+    printf("]\n");
 }
 
 void ArrayReverser(int input_array[], int size)
