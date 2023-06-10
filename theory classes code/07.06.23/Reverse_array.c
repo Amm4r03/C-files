@@ -2,22 +2,28 @@
 
 #include <stdio.h>
 
-void populate_array(int input_array[], int size)
+void populate_array(int input_array[], int size)    // inputs values into the array
 {
     for (int i = 0; i < size; i++)
     {
-        printf("Enter %d member of array : ", i);
+        printf("Enter %d member of array : ", i+1);
         scanf("%d", &input_array[i]);
     }
 }
 
 void print_array(int input_array[], int size)
 {
+    printf("[");
     for (int i = 0; i < size; i++)
     {
-        printf("%d ", input_array[i]);
+        printf("%d", input_array[i]);
+        if (i+1 != size)
+        {
+            printf(", ");
+        }
+        
     }
-    
+    printf("]");
 }
 
 int main()
