@@ -44,7 +44,7 @@ void twosum (int input[], int target, int size)
     }
     if(match == 0)
     {
-        printf("Error : No matches found within the array");
+        printf("Error : No possible matches found within the array");
     }
 }
 
