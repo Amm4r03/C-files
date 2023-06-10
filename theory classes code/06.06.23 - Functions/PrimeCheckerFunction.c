@@ -26,11 +26,11 @@ int PrimeStatus(int number)
     {
         if (number % i == 0)
         {
-            prime = 0;
-            return prime;
+            prime = 0;      // if number is divisible by any number, flag changed to 0 (false) and
+            return prime;   // returned to main
         }
     }
-    return prime;
+    return prime;           // if full loop goes without triggering the inner condition, number is prime
 }
 
 int main()
