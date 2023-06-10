@@ -116,13 +116,11 @@ int main()
         if (input_array[middle] > key)
         {
             upper = middle;
-            printf("1");
         }
 
         else if(input_array[middle] < key)
         {
             lower = middle;
-            printf("2");
         }
     
         // boundary case : multiple values same as key exist in array
@@ -190,9 +188,9 @@ int main()
         {
             if (i+1 == count)
             {
-                printf("%d]", locations[i]+1);
+                printf("%d]", locations[i]);
             }
-            
+            else
             printf("%d, ", locations[i]+1);
         }
     }
