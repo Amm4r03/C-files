@@ -35,6 +35,11 @@ int PrimeStatus(int number)
     return prime;           // if full loop goes without triggering the inner condition, number is prime
 }
 
+void divisors()
+{
+
+}
+
 int main()
 {
     int number;
