@@ -41,11 +41,16 @@ void divisors(int number)
     {
         if (number % i == 0)
         {
-            printf("%d ", i);
-        }
-        
+            if (number/i == i)
+            {
+                printf("%d", i);
+            }
+            else
+            {
+                printf("%d, %d, ", i, number/i);
+            }
+        }   
     }
-    
 }
 
 int main()
