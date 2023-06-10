@@ -35,9 +35,17 @@ int PrimeStatus(int number)
     return prime;           // if full loop goes without triggering the inner condition, number is prime
 }
 
-void divisors()
+void divisors(int number)
 {
-
+    for (int i = 1; i * i <= number; i++)
+    {
+        if (number % i == 0)
+        {
+            printf("%d ", i);
+        }
+        
+    }
+    
 }
 
 int main()
