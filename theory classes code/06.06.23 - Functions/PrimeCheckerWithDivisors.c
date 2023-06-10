@@ -62,7 +62,12 @@ int main()
     {
         printf("%d is a prime number\nIts divisors are : [1, %d]", original, original);
     }
-    
+    else
+    {
+        printf("%d is not a prime number\n Its divisors are as follows\n");
+        divisors(number);
+    }
+
 
     return 0;
 }
