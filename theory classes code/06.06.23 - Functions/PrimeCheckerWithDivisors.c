@@ -3,7 +3,6 @@
 // print and the number and 1 as divisors if its prime
 
 #include <stdio.h>
-#include <math.h>
 
 int PrimeStatus(int number)
 {
