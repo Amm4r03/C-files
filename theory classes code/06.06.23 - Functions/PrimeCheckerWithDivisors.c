@@ -63,8 +63,11 @@ void divisors(int number, int *divisors_array, int *count_of_divisors)
 int main()
 {
     int number;
+
     printf("Enter a number : ");
     scanf("%d", &number);
+    
+    int divisors_array[100];
 
     int original = number;
 
@@ -76,8 +79,26 @@ int main()
     }
     else
     {
-        printf("%d is not a prime number\nIts divisors are as follows\n", original);
-        divisors(number);
+        int count;
+        divisors(number, divisors_array, &count);
+        
+        printf("%d is not a prime number\nIts %d divisors are as follows\n", original, count);
+
+        printf("[");
+        for (int i = 0; i < count; i = i + 2)
+        {
+            printf("%d, ", divisors_array[i]);
+        }
+        for (int i = count - 1; i > 0; i = i - 2)
+        {
+            if (i-1 == 0)
+            {
+                printf("%d]", divisors_array[i]);
+            }
+            else
+            printf("%d, ", divisors_array[i]);
+        }
+        
     }
 
 
