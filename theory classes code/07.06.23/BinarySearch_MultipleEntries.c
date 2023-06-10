@@ -104,7 +104,6 @@ int main()
     int upper = size;       // initialize upper index of array (same as size)
     int locations[size];    // size of array is set assuming that all numbers are same key
     int count = 0;          // counter for number of matches found
-    int match;              // not used in code, will delete variable
     int y;
 
     for (int i = 0; lower != upper; i++)
