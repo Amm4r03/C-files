@@ -34,3 +34,22 @@ int PrimeStatus(int number)
     }
     return prime;           // if full loop goes without triggering the inner condition, number is prime
 }
+
+int main()
+{
+    int number;
+    printf("Enter a number : ");
+    scanf("%d", &number);
+
+    int original = number;
+
+    int isPrime = PrimeStatus(number);
+
+    if (isPrime)
+    {
+        printf("%d is a prime number\nIts divisors are : [1, %d]", original, original);
+    }
+    
+
+    return 0;
+}
