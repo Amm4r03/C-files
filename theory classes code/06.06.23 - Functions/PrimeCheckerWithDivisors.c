@@ -69,7 +69,7 @@ int main()
     }
     else
     {
-        printf("%d is not a prime number\n Its divisors are as follows\n");
+        printf("%d is not a prime number\nIts divisors are as follows\n", original);
         divisors(number);
     }
 
