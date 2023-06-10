@@ -105,8 +105,11 @@ int main()
     int locations[size];    // size of array is set assuming that all numbers are same key
     int count = 0;          // counter for number of matches found
     int y;
+    int first_occurence = 0;          // counts the first occurrence of the key
+    int last_occurence = size;       // final occurence
+    int final_count = last_occurence - first_occurence + 1;        // calculates total occurrences in array using difference 
 
-    for (int i = 0; lower != upper; i++)
+    for (int i = 0; lower <= upper; i++)
     {
         
         middle = (upper + lower)/2;
@@ -114,12 +117,12 @@ int main()
 
         if (input_array[middle] > key)
         {
-            upper = middle;
+            upper = middle - 1;
         }
 
         else if(input_array[middle] < key)
         {
-            lower = middle;
+            lower = middle + 1;
         }
     
         // boundary case : multiple values same as key exist in array
@@ -130,30 +133,32 @@ int main()
 
             if (input_array[middle-1] == key && input_array[middle+1] != key)
             {
-                upper = middle;
+                upper = middle - 2;
                 locations[count] = middle - 1;
                 count++;
+                last_occurence = middle;
             }
             else if (input_array[middle+1] == key && input_array[middle-1] != key)
             {
-                lower = middle;
-                locations[count] = middle +1;
+                lower = middle + 2;
+                locations[count] = middle + 1;
                 count++;
+                first_occurence = middle;
             }
             else
             {
                 while (input_array[middle - i] == key)
                 {
                     i++;
-                    locations[count] = middle - i;
                     count++;
+                    first_occurence = middle - i;
                 }
                 lower = middle - i;
                 while (input_array[middle + y] == key)
                 {
                     y++;
-                    locations[count] = middle + y;
                     count++;
+                    last_occurence = middle + y;
                 }
                 upper = middle + y;
                 break;
@@ -167,6 +172,8 @@ int main()
         }
     }
 
+    final_count = last_occurence - first_occurence + 1;
+
     if (count < 1)
     {
         printf("Error : %d does not exist within the array", key);
@@ -174,13 +181,14 @@ int main()
     
     else
     {
-        if (count == 1)
+        if (final_count == 1)
         {
             printf("%d was found in the sorted array\nThe location is : \n", key);
         }
         else
         {
-            printf("%d was found in the sorted array at  %d locations\nThe indices are : \n [", key, count);
+            printf("%d was found in the sorted array at  %d locations", key, final_count);
+            printf("\n%d occurs from indices %d to %d\n\nThe indices are : \n [", key, first_occurence, last_occurence);
         }
     
         for (int i = 0; i < count; i++)
@@ -190,7 +198,7 @@ int main()
                 printf("%d]", locations[i]);
             }
             else
-            printf("%d, ", locations[i]+1);
+            printf("%d, ", locations[i]);
         }
     }
 
