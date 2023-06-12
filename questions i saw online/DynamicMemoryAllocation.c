@@ -1,0 +1,1 @@
+// testing how dynamic memory allocation works in C
