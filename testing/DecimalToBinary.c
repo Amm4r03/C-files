@@ -8,13 +8,19 @@ int main()
     scanf("%d", &number);
     int size;
 
-    if (number < 255)      
+    
+    if ( number > 4294967295 )
+    {
+        printf("number too large to be represented in integer data type");
+        return 0;
+    }
+    else if (number < 255)
     {
         size = 8;       // sets size to 1 byte
     }
     else if (number > 16777215)
     {
-        size = 32;
+        size = 32;      // sets size to 4 bytes (max for int data type)
     }
     else if (number > 65535)
     {
@@ -24,11 +30,6 @@ int main()
     {
         size = 16;      // sets size to 2 bytes
     }
-    else if ( number > 4294967295 )
-    {
-        printf("number too large to be represented in integer data type");
-    }
-    
     
 
     int digits[size];
