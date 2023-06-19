@@ -14,7 +14,7 @@ void Dashes()
 
 void DecimalToBinary(int number)
 {
-    int size = 32;    
+    int size = 8;    
 
     int digits[size];
     int digit;
@@ -132,7 +132,7 @@ void NotFunction(int a, int b)
     printf("%d\t=\t", ~a);
     DecimalToBinary(~a);
 
-    printf("\n");
+    printf("\n\n\n");
 
     printf("NOT %d\n%d\t=\t", b, b);
     DecimalToBinary(b);
@@ -144,7 +144,7 @@ void NotFunction(int a, int b)
 
 int main()
 {
-    printf("this functions demonstrates the use of bitwise operators in C");
+    printf("this code demonstrates the use of bitwise operators in C");
     
     Dashes();
 
@@ -158,7 +158,7 @@ int main()
 
     int input;
 
-    printf("Enter :\n1 to see AND operation\n2 to see OR operation\n3 to see XOR operation\n4 to see NOT function (performed separately on both input numbers)\nEnter a number : ");
+    printf("Enter :\n1 to see AND operation\n2 to see OR operation\n3 to see XOR operation\n4 to see NOT operation (performed separately on both input numbers)\n\nEnter a number : ");
     
     do
     {
