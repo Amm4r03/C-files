@@ -87,6 +87,25 @@ void XorFunction(int a, int b)
 
 }
 
+void NotFunction(int a, int b)
+{
+
+    printf("NOT function\nNOT %d\n%d\t=\t", a,a);
+    DecimalToBinary(a);
+    Dashes();
+    printf("%d\t=\t", ~a);
+    DecimalToBinary(~a);
+
+    printf("\n");
+
+    printf("NOT %d\n%d\t=\t", b, b);
+    DecimalToBinary(b);
+    Dashes();
+    printf("%d\t=\t", ~b);
+    DecimalToBinary(~b);
+
+}
+
 int main()
 {
     printf("this functions demonstrates the use of bitwise operators in C");
