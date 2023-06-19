@@ -48,8 +48,47 @@ void DecimalToBinary(int number)
 
 int main()
 {
-    printf("this functions demonstrates the use of bitwise operators in C\n");
-    int a = 3, b = 2;
-    printf("%d", a&b);
+    printf("this functions demonstrates the use of bitwise operators in C");
+    
+    Dashes();
+
+    int a, b;
+
+    printf("Enter a number : ");
+    scanf("%d", &a);
+
+    printf("Enter another number : ");
+    scanf("%d", &b);
+
+    int input;
+
+    printf("Enter :\n1 to see AND operation\n2 to see OR operation\n3 to see XOR operation\nEnter a number : ");
+    
+    do
+    {
+        scanf("%d", &input);
+
+        if (input != 1 && input != 2 && input != 3)
+        {
+            printf("Invalid input - try again\n");
+            printf("Enter a number (1-3) : ");
+        }
+
+    } while (input != 1 && input != 2 && input != 3);
+    
+    if (input == 1)
+    {
+        AndFunction(a,b);   
+    }
+    else if (input == 2)
+    {
+        OrFunction(a,b);
+    }
+    else if (input == 3)
+    {
+        XorFunction(a,b);
+    }
+    
+
     return 0;
 }
