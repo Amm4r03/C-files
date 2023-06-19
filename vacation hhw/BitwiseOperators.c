@@ -109,13 +109,13 @@ int main()
     {
         scanf("%d", &input);
 
-        if (input != 1 && input != 2 && input != 3)
+        if (input != 1 && input != 2 && input != 3 && input != 4)
         {
             printf("Invalid input - try again\n");
-            printf("Enter a number (1-3) : ");
+            printf("Enter a number (1-4) : ");
         }
 
-    } while (input != 1 && input != 2 && input != 3);
+    } while (input != 1 && input != 2 && input != 3 && input != 4);
     
     if (input == 1)
     {
@@ -129,7 +129,10 @@ int main()
     {
         XorFunction(a,b);
     }
-    
+    else if (input == 4)
+    {
+        NotFunction(a,b);
+    }
 
     return 0;
 }
