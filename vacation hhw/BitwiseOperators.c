@@ -1,33 +1,20 @@
-// WAP to illustrate the use of bitwise operators in C
+// WAP to illustrate the use of bitwise operators in C (AND, OR and XOR)
 
 #include <stdio.h>
 
+void Dashes()
+{
+    printf("\n");
+    for (int i = 0; i < 33; i++)
+    {
+        printf("-");
+    }
+    printf("\n");
+}
+
 void DecimalToBinary(int number)
 {
-    int size;
-
-    if ( number > 4294967295 )
-    {
-        printf("number too large to be represented in integer data type");
-        return 0;
-    }
-    else if (number < 255)
-    {
-        size = 8;       // sets size to 1 byte
-    }
-    else if (number > 16777215)
-    {
-        size = 32;      // sets size to 4 bytes (max for int data type)
-    }
-    else if (number > 65535)
-    {
-        size = 24;      // sets size to 3 bytes
-    }
-    else if (number > 255)
-    {
-        size = 16;      // sets size to 2 bytes
-    }
-    
+    int size = 32;    
 
     int digits[size];
     int digit;
