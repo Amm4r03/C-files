@@ -103,7 +103,7 @@ int main()
 
     int input;
 
-    printf("Enter :\n1 to see AND operation\n2 to see OR operation\n3 to see XOR operation\nEnter a number : ");
+    printf("Enter :\n1 to see AND operation\n2 to see OR operation\n3 to see XOR operation\n4 to see NOT function (performed separately on both input numbers)\nEnter a number : ");
     
     do
     {
