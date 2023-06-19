@@ -46,6 +46,60 @@ void DecimalToBinary(int number)
 }
 
 
+void AndFunction(int a, int b)
+{
+
+    printf("AND function\n%d\t=\t", a);
+    DecimalToBinary(a);
+
+    printf("\n");
+
+    printf("%d\t=\t", b);
+    DecimalToBinary(b);
+
+    Dashes();
+
+    printf("%d\t=\t", a&b);
+    DecimalToBinary(a&b);
+
+}
+
+void OrFunction(int a, int b)
+{
+
+    printf("OR function\n%d\t=\t", a);
+    DecimalToBinary(a);
+
+    printf("\n");
+
+    printf("%d\t=\t", b);
+    DecimalToBinary(b);
+
+    Dashes();
+
+    printf("%d\t=\t", a|b);
+    DecimalToBinary(a|b);
+
+}
+
+void XorFunction(int a, int b)
+{
+
+    printf("XOR function\n%d\t=\t", a);
+    DecimalToBinary(a);
+
+    printf("\n");
+
+    printf("%d\t=\t", b);
+    DecimalToBinary(b);
+
+    Dashes();
+
+    printf("%d\t=\t", a^b);
+    DecimalToBinary(a^b);
+
+}
+
 int main()
 {
     printf("this functions demonstrates the use of bitwise operators in C");
