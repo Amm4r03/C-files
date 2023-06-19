@@ -19,16 +19,52 @@ void DecimalToBinary(int number)
     int digits[size];
     int digit;
 
-    for (int i = 0; i < size; i++)
+    if (number < 0)
     {
-        digit = number % 2;
-        digits[i] = digit;
-        number = number / 2;
+        number = number * -1;
+        for (int i = 0; i < size; i++)
+        {
+            digit = number % 2;
+            if (digit == 0)
+            {
+                digit = 1;
+            }
+            else
+            {
+                digit = 0;
+            }
+                        
+            digits[i] = digit;
+            number = number / 2;
+        }
+        
+        int carry = 1;
+        for (int i = 0; i < size; i++)
+        {
+            int sum = digits[i] + carry;
+            digits[i] = sum % 2;
+            carry = sum / 2;
+        }
+    
+        for (int i = size - 1; i >= 0; i--)
+        {
+            printf("%d ", digits[i]);
+        }
     }
 
-    for (int i = size - 1; i >= 0; i--)
+    else
     {
-        printf("%d ", digits[i]);
+        for (int i = 0; i < size; i++)
+        {
+            digit = number % 2;
+            digits[i] = digit;
+            number = number / 2;
+        }
+
+        for (int i = size - 1; i >= 0; i--)
+        {
+            printf("%d ", digits[i]);
+        }
     }
 }
 
