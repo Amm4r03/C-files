@@ -101,73 +101,32 @@ int main()
 
     int lower = 0;          // initialize lower index of array
     int upper = size;       // initialize upper index of array (same as size)
-    int locations[size];    // size of array is set assuming that all numbers are same key
+    int locations;    // size of array is set assuming that all numbers are same key
     int count = 0;          // counter for number of matches found
     int match;              // not used in code, will delete variable
     int y;
 
-    for (int i = 0; lower != upper; i++)
+    for (int i = 0; lower <= upper; i++)
     {
         
         middle = (upper + lower)/2;
 
         if (input_array[middle] == key)
         {
-            locations[count] = middle;
+            locations = middle;
             count++;
             break;
         }
         
         else if (input_array[middle] > key)
         {
-            upper = middle;
+            upper = middle - 1;
         }
 
         else
         {
-            lower = middle;
+            lower = middle + 1;
         }
-    
-        // boundary case : multiple values same as key exist in array
-        /*else if (input_array[middle] == key && (input_array[middle-1] == key || input_array[middle+1] == key))
-        {
-            locations[count] = middle;
-            count++;
-
-            if (input_array[middle-1] == key && input_array[middle+1] != key)
-            {
-                upper = middle;
-                locations[count] = middle - 1;
-                count++;
-            }
-            else if (input_array[middle+1] == key && input_array[middle-1] != key)
-            {
-                lower = middle;
-                locations[count] = middle +1;
-                count++;
-            }
-            else
-            {
-                while (input_array[middle - i] == key)
-                {
-                    i++;
-                }
-                lower = i;
-                while (input_array[middle + y] == key)
-                {
-                    y++;
-                }
-                upper = y;
-                count = count + (upper - lower);
-                break;
-            }
-        }
-        else
-        {
-            locations[count] = middle;
-            count++;
-            break;
-        }*/
     }
 
     if (count < 1)
@@ -176,12 +135,12 @@ int main()
     }
     else
     {
-    printf("%d was found in the sorted array\nThe location is : \n", key);
+        printf("%d was found in the sorted array\nThe location is : \n", key);
 
-    for (int i = 0; i < count; i++)
-    {
-        printf("%d", locations[i]+1);
-    }
+        for (int i = 0; i < count; i++)
+        {
+            printf("%d", locations+1);
+        }
     }
 
     return 0;
