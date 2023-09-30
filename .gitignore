@@ -3,3 +3,63 @@ testing/DecimalToBinary.exe.stackdump
 testing/P_files/CoordinatesInNewWindow-2.c
 testing/P_files/CoordinatesInNewWindow.c
 testing/P_files/CoordinatesInNewWindow.exe
+testing/neural networks/neural3.c
+testing/neural networks/neural3.exe
+testing/neural networks/GoogleColab/combined_data.csv
+testing/neural networks/GoogleColab/trained_model_regression(3500_epochs).h5
+testing/neural networks/GoogleColab/training_data.csv
+testing/neural networks/GoogleColab/BMI Model/BMI_trained_model.h5
+testing/neural networks/GoogleColab/BMI Model/model_biases.csv
+testing/neural networks/GoogleColab/BMI Model/model_weights.csv
+testing/neural networks/GoogleColab/BMI Model/training_data.csv
+testing/neural networks/neural 10/neural10.c
+testing/neural networks/neural 10/neural10.exe
+testing/neural networks/neural 10/training_data.csv
+testing/neural networks/neural 10/weights.txt
+testing/neural networks/neural 10/Neural 10 - Varying Neurons/neural10_varyingNeurons.c
+testing/neural networks/neural 10/Neural 10 - Varying Neurons/neural10_varyingNeurons.exe
+testing/neural networks/neural 10/Neural 10 - Varying Neurons/training_data.csv
+testing/neural networks/neural 10/Neural 10 - Varying Neurons/weights.txt
+testing/neural networks/neural 10/neural 10 - Batch/neural10-batchLearning.c
+testing/neural networks/neural 7 files/neural7.c
+testing/neural networks/neural 7 files/neural7.exe
+testing/neural networks/neural 7 files/training_data.csv
+testing/neural networks/neural 7 files/weights_biases.txt
+testing/neural networks/neural 8 files/neural 8b/neural8b.c
+testing/neural networks/neural 8 files/neural 8b/neural8b.exe
+testing/neural networks/neural 8 files/neural 8b/training_data.csv
+testing/neural networks/neural 8 files/neural 8c/neural8c.c
+testing/neural networks/neural 8 files/neural 8c/neural8c.exe
+testing/neural networks/neural 8 files/neural 8c/training_data.csv
+testing/neural networks/neural 8 files/neural 8c/weights.txt
+testing/neural networks/neural 8 files/neural8a/neural8a.c
+testing/neural networks/neural 8 files/neural8a/neural8a.exe
+testing/neural networks/neural 8 files/neural8a/training_data.csv
+testing/neural networks/neural 8 files/neural8a/weights_biases.txt
+testing/neural networks/neural 9/neural9.c
+testing/neural networks/neural 9/neural9.exe
+testing/neural networks/neural 9/weights.txt
+testing/neural networks/neural4 files/neural4.c
+testing/neural networks/neural4 files/neural4.exe
+testing/neural networks/neural4 files/training_data.csv
+testing/neural networks/neural4 files/weights_biases.txt
+testing/neural networks/neural5 files/neural5.c
+testing/neural networks/neural5 files/neural5.exe
+testing/neural networks/neural5 files/training_data.csv
+testing/neural networks/neural5 files/weights_biases.txt
+testing/neural networks/neural6 files/neural6.c
+testing/neural networks/newNeurals - changedPrompt/neuralNetwork1.c/combined_data.csv
+testing/neural networks/newNeurals - changedPrompt/neuralNetwork1.c/neuralNetwork1.c
+testing/neural networks/newNeurals - changedPrompt/neuralNetwork1.c/neuralNetwork1.exe
+testing/neural networks/newNeurals - changedPrompt/neuralNetwork1.c/neuralNetwork1.exe.stackdump
+testing/neural networks/newNeurals - changedPrompt/neuralNetwork1.c/tempCodeRunnerFile.c
+testing/neural networks/newNeurals - changedPrompt/neuralNetwork1.c/training_data.csv
+testing/neural networks/newNeurals - changedPrompt/neuralNetwork1.c/weights.csv
+testing/neural.c
+testing/neural.exe
+testing/neural2.c
+testing/neural2.exe
+testing/neural3.c
+testing/neural3.exe
+testing/training_data.csv
+testing/training_data_forNeural2.csv
