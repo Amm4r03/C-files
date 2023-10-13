@@ -20,7 +20,7 @@ int main()
 
     while(1)
     {
-        printf("Implementing Stack using Array");
+        printf("\nImplementing Stack using Array");
         printf("\n1 : push the element\n2 : pop the element\n3 : show\n4 : quit");
         printf("\nenter your choice : ");
         scanf("%d", &choice);
