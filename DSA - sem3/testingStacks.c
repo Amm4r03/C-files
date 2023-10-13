@@ -89,8 +89,8 @@ void show()
     }
     else
     {
-        printf("members in stack : ");
-        for (int i = top; i >= 0; i++)
+        printf("members in stack : \n");
+        for (int i = top; i >= 0; i--)
         {
             printf("%d\n", inputArray[i]);
         }
