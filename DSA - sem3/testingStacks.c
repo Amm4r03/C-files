@@ -79,3 +79,20 @@ void pop()
         top = top - 1;
     }
 }
+
+void show()
+{
+    if(top == -1)
+    {
+        printf("\nunderflow");
+        exit(0);
+    }
+    else
+    {
+        printf("members in stack : ");
+        for (int i = top; i >= 0; i++)
+        {
+            printf("%d\n", inputArray[i]);
+        }
+    }
+}
