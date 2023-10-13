@@ -63,3 +63,4 @@ testing/neural3.c
 testing/neural3.exe
 testing/training_data.csv
 testing/training_data_forNeural2.csv
+*.exe
