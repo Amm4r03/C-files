@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"files.associations": {
+			"exercise1-6_filecopying": "c",
+			"iostream": "cpp",
+			"stdio.h": "c"
+		}
+	}
+}
