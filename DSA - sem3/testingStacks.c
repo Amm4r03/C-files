@@ -17,10 +17,10 @@ void show();        // displays the topmost element of the stack
 int main()
 {
     int choice;
+    printf("\nImplementing Stack using Array");
 
     while(1)
     {
-        printf("\nImplementing Stack using Array");
         printf("\n1 : push the element\n2 : pop the element\n3 : show\n4 : quit");
         printf("\nenter your choice : ");
         scanf("%d", &choice);
