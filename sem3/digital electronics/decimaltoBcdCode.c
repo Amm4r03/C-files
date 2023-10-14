@@ -61,5 +61,6 @@ void decToBin(int input)
     for (int i = 3; i >= 0; i--)
     {
         printf("%d", binary[i]);
-    }   
+    }
+    printf(" ");
 }
