@@ -10,7 +10,13 @@ int main()
     int number;     // takes input from user as decimal number
     printf("enter : ");
     scanf("%d", &number);
-
+    
+    if (number == 0)
+    {
+        printf("0000");
+        return 0;
+    }
+    
     binToBcd(number);
 
     return 0;
