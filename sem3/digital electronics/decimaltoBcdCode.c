@@ -1,6 +1,7 @@
 // converts decimal input to its BCD equivalent 
 
 #include <stdio.h>
+#include <stdlib.h>
 
 void decToBin();
 void binToBcd();
