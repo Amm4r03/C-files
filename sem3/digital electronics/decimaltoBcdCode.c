@@ -27,13 +27,24 @@ void binToBcd(int input)
     // separates number by digits and creates binary numbers for all 
     // returns BCD number
 
-    int digit;
+    int digit;          // stores individual digits
+    int InputDigits[9];      // assuming max digits in input number is 9
+
+    int i = 0;
 
     while (input > 0)
     {
         digit = input % 10;
         input = input / 10;
-        decToBin(digit);
+        InputDigits[i] = digit;
+        i += 1;
+    }
+
+    int size = i;
+
+    for (i = size - 1; i >= 0; i--)
+    {
+        decToBin(InputDigits[i]);
     }
 }
 
